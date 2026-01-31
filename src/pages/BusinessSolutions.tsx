@@ -29,12 +29,14 @@ export default function BusinessSolutions() {
   const compliancePackages = [
     {
       title: 'Standard Registration',
+      price: 'From R900',
       description: 'Essential compliance services to get your business registered and operational.',
       features: ['Company registration', 'CIPC registration', 'B-BBEE certification', 'SARS registration', 'CSD registration'],
       highlight: false,
     },
     {
       title: 'Premium Registration',
+      price: 'R1900',
       description: 'Comprehensive registration with additional regulatory requirements.',
       features: [
         'CIPC registration',
@@ -102,7 +104,8 @@ export default function BusinessSolutions() {
                     </span>
                   )}
                 </div>
-                <p className="mt-4 text-sm text-[var(--ink)]/70">{pkg.description}</p>
+                <div className="mt-4 text-3xl font-semibold text-[var(--ink)]">{pkg.price}</div>
+                <p className="mt-2 text-sm text-[var(--ink)]/70">{pkg.description}</p>
                 <ul className="mt-6 space-y-3">
                   {pkg.features.map((feature) => (
                     <li key={feature} className="flex items-start gap-3 text-sm text-[var(--ink)]/80">

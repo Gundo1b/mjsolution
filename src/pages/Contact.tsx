@@ -33,7 +33,7 @@ export default function Contact() {
     {
       icon: Phone,
       title: 'Phone',
-      details: ['+27 12 000 0000', '+27 81 000 0000'],
+      details: ['076 380 3862', '063 714 3167'],
     },
     {
       icon: Mail,
@@ -93,9 +93,21 @@ export default function Contact() {
                       <div>
                         <h3 className="font-semibold text-[var(--ink)] mb-2">{info.title}</h3>
                         {info.details.map((detail) => (
-                          <p key={detail} className="text-[var(--ink)]/70 text-sm">
-                            {detail}
-                          </p>
+                          info.title === 'Phone' ? (
+                            <a
+                              key={detail}
+                              href={`https://wa.me/${detail.replace(/\s+/g, '').replace(/^0/, '27')}`}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="block text-[var(--ink)]/70 text-sm hover:text-[var(--moss)] underline mb-1"
+                            >
+                              {detail}
+                            </a>
+                          ) : (
+                            <p key={detail} className="text-[var(--ink)]/70 text-sm">
+                              {detail}
+                            </p>
+                          )
                         ))}
                       </div>
                     </div>
