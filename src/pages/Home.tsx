@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Monitor, Construction, GraduationCap, Shield, FileText, ChevronRight, Sparkles, MapPin, Globe } from 'lucide-react';
+import { Monitor, Construction, GraduationCap, Shield, FileText, ChevronRight, Sparkles, Globe } from 'lucide-react';
 
 export default function Home() {
   useEffect(() => {
@@ -51,7 +51,7 @@ export default function Home() {
       icon: Construction,
       href: '/engineering-construction',
       image:
-        'https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1200&q=80',
+        '/images/engineering-construction.png',
       tone: 'text-[var(--clay)]',
     },
     {
@@ -60,7 +60,7 @@ export default function Home() {
       icon: GraduationCap,
       href: '/mj-academy',
       image:
-        'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1200&q=80',
+        '/images/mj-academy.png',
       tone: 'text-[var(--sun)]',
     },
     {
@@ -69,7 +69,7 @@ export default function Home() {
       icon: Shield,
       href: '/security-cleaning',
       image:
-        'https://images.unsplash.com/photo-1489515217757-5fd1be406fef?auto=format&fit=crop&w=1200&q=80',
+        '/images/security-cleaning.png',
       tone: 'text-[var(--moss)]',
     },
     {
@@ -78,7 +78,7 @@ export default function Home() {
       icon: FileText,
       href: '/tendering-support',
       image:
-        'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1200&q=80',
+        '/images/tendering-support.png',
       tone: 'text-[var(--clay)]',
     },
   ];
@@ -89,20 +89,7 @@ export default function Home() {
     { label: 'Nationwide coverage', value: '9 provinces' },
   ];
 
-  const operatingModel = [
-    {
-      title: 'Assess',
-      detail: 'Scope the opportunity, map compliance, align internal stakeholders.',
-    },
-    {
-      title: 'Deliver',
-      detail: 'Assign qualified teams, execute on time, share governance updates.',
-    },
-    {
-      title: 'Support',
-      detail: 'Maintain performance through reporting, audits, and refinement.',
-    },
-  ];
+
 
   const gallery = [
     'https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=1200&q=80',
@@ -224,51 +211,9 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-white/80 border-y border-black/5 reveal-on-scroll" data-reveal>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <div className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.4em] text-[var(--moss)]">
-                <MapPin className="h-4 w-4" />
-                Operating model
-              </div>
-              <h2 className="font-display text-3xl sm:text-4xl mt-4 mb-6">A clear delivery rhythm from brief to support.</h2>
-              <p className="text-[var(--ink)]/70 mb-8">
-                We align compliance, execution, and reporting to keep stakeholders informed and projects on track.
-              </p>
-              <div className="space-y-4">
-                {operatingModel.map((step, index) => (
-                  <div key={step.title} className="flex items-start gap-4 rounded-2xl border border-black/10 bg-white p-4">
-                    <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[var(--ink)] text-sm font-semibold text-white">
-                      0{index + 1}
-                    </div>
-                    <div>
-                      <div className="text-base font-semibold text-[var(--ink)]">{step.title}</div>
-                      <div className="text-sm text-[var(--ink)]/70">{step.detail}</div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-            <div className="grid gap-6">
-              <div className="image-frame h-[260px]">
-                <img
-                  src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80"
-                  alt="Digital delivery"
-                />
-              </div>
-              <div className="image-frame h-[220px]">
-                <img
-                  src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1200&q=80"
-                  alt="Operations and compliance"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 reveal-on-scroll" data-reveal>
+
+      {/* <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 reveal-on-scroll" data-reveal>
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
           <div className="lg:col-span-1">
             <p className="text-xs uppercase tracking-[0.4em] text-[var(--moss)]">Snapshots</p>
@@ -285,7 +230,7 @@ export default function Home() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       <section className="bg-[var(--ink)] text-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">

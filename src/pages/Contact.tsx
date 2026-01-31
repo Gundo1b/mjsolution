@@ -67,12 +67,7 @@ export default function Contact() {
                 Tell us about your project scope and we will connect you with the right division.
               </p>
             </div>
-            <div className="image-frame h-[320px]">
-              <img
-                src="https://images.unsplash.com/photo-1489515217757-5fd1be406fef?auto=format&fit=crop&w=1200&q=80"
-                alt="Office exterior"
-              />
-            </div>
+
           </div>
         </div>
       </section>

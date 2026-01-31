@@ -69,11 +69,10 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 <Link
                   key={item.name}
                   to={item.href}
-                  className={`px-3 py-2 rounded-full text-sm font-medium transition-colors ${
-                    isActive(item.href)
-                      ? 'bg-[var(--ink)] text-white'
-                      : 'text-[var(--ink)] hover:bg-white/70'
-                  }`}
+                  className={`px-3 py-2 rounded-full text-sm font-medium transition-colors ${isActive(item.href)
+                    ? 'bg-[var(--ink)] text-white'
+                    : 'text-[var(--ink)] hover:bg-white/70'
+                    }`}
                 >
                   {item.name}
                 </Link>
@@ -93,9 +92,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                         key={item.name}
                         to={item.href}
                         onClick={() => setServicesDropdownOpen(false)}
-                        className={`block px-4 py-3 text-sm text-[var(--ink)] hover:bg-[var(--sand)] transition-colors ${
-                          isActive(item.href) ? 'bg-[var(--sand)] font-semibold' : ''
-                        }`}
+                        className={`block px-4 py-3 text-sm text-[var(--ink)] hover:bg-[var(--sand)] transition-colors ${isActive(item.href) ? 'bg-[var(--sand)] font-semibold' : ''
+                          }`}
                       >
                         {item.name}
                       </Link>
@@ -134,11 +132,10 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                   key={item.name}
                   to={item.href}
                   onClick={() => setMobileMenuOpen(false)}
-                  className={`block px-4 py-2 rounded-full text-base font-medium ${
-                    isActive(item.href)
-                      ? 'bg-[var(--ink)] text-white'
-                      : 'text-[var(--ink)] hover:bg-white/80'
-                  }`}
+                  className={`block px-4 py-2 rounded-full text-base font-medium ${isActive(item.href)
+                    ? 'bg-[var(--ink)] text-white'
+                    : 'text-[var(--ink)] hover:bg-white/80'
+                    }`}
                 >
                   {item.name}
                 </Link>
@@ -189,13 +186,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               <p className="text-white/70 text-sm leading-relaxed max-w-md">
                 Professional service provider delivering compliant, cost-effective solutions across public and private sector clients. We combine governance, performance, and accountability.
               </p>
-              <div className="mt-6 flex flex-wrap gap-3 text-xs uppercase tracking-[0.3em] text-white/60">
-                <span>ICT</span>
-                <span>Construction</span>
-                <span>Training</span>
-                <span>Security</span>
-                <span>Tendering</span>
-              </div>
+
             </div>
 
             <div>
@@ -212,8 +203,11 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             <div>
               <h3 className="font-semibold mb-4">Contact</h3>
               <ul className="space-y-2 text-sm text-white/70">
-                <li>Pretoria CBD, Gauteng</li>
-                <li>South Africa</li>
+                <li>286 Pretorius Street</li>
+                <li>Central Towers</li>
+                <li className="pt-2 font-medium text-white">076 380 3862</li>
+                <li className="font-medium text-white">063 714 3167</li>
+                <li className="pt-2 text-[var(--sun)]">info@mjsolutiongroup.co.za</li>
                 <li>Mon-Fri 08:00 - 17:00</li>
               </ul>
               <Link
