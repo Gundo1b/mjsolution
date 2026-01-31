@@ -47,10 +47,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="hidden lg:flex items-center justify-between text-xs uppercase tracking-[0.2em] text-[var(--moss)] pt-3">
             <div className="flex items-center gap-5">
-              <span>Pretoria CBD, Gauteng</span>
               <span>B-BBEE LEVEL 1 COMPLIANCE</span>
             </div>
-            <span>Mon-Fri 08:00 - 17:00</span>
+            <span>Mon-Fri 08:00 - 16:00</span>
           </div>
 
           <div className="flex items-center justify-between py-4">
@@ -208,7 +207,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 <li className="pt-2 font-medium text-white">076 380 3862</li>
                 <li className="font-medium text-white">063 714 3167</li>
                 <li className="pt-2 text-[var(--sun)]">info@mjsolutiongroup.co.za</li>
-                <li>Mon-Fri 08:00 - 17:00</li>
+                <li>Mon-Fri 08:00 - 16:00</li>
               </ul>
               <Link
                 to="/contact"
