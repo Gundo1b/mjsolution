@@ -28,7 +28,7 @@ export default function Contact() {
     {
       icon: MapPin,
       title: 'Our Location',
-      details: ['Pretoria CBD', 'Gauteng', 'South Africa'],
+      details: ['286 Pretorius Street', 'Central Towers', 'Pretoria CBD', 'Gauteng', 'South Africa'],
     },
     {
       icon: Phone,
