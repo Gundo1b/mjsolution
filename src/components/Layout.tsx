@@ -1,10 +1,12 @@
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X } from 'lucide-react';
-import { useState } from 'react';
-import logoUrl from '../WhatsApp Image 2026-01-18 at 06.24.46.jpeg';
+import { Menu, X, ChevronDown } from 'lucide-react';
+import { useState, useEffect, useRef } from 'react';
+import logoUrl from '../logo.jpeg';
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
+  const dropdownRef = useRef<HTMLDivElement>(null);
   const location = useLocation();
 
   const navigation = [
@@ -19,9 +21,25 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     { name: 'MJ Academy', href: '/mj-academy' },
     { name: 'Security & Cleaning', href: '/security-cleaning' },
     { name: 'Tendering Support', href: '/tendering-support' },
+    { name: 'ICT Services', href: '/ict-services' },
   ];
 
   const isActive = (href: string) => location.pathname === href;
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+        setServicesDropdownOpen(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
+
+  useEffect(() => {
+    setServicesDropdownOpen(false);
+  }, [location.pathname]);
 
   return (
     <div className="min-h-screen bg-[var(--sand)] text-[var(--ink)]">
@@ -30,7 +48,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           <div className="hidden lg:flex items-center justify-between text-xs uppercase tracking-[0.2em] text-[var(--moss)] pt-3">
             <div className="flex items-center gap-5">
               <span>Pretoria CBD, Gauteng</span>
-              <span>Compliance-led delivery</span>
+              <span>B-BBEE LEVEL 1 COMPLIANCE</span>
             </div>
             <span>Mon-Fri 08:00 - 17:00</span>
           </div>
@@ -41,7 +59,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 <img src={logoUrl} alt="MJ Solution Group logo" className="h-11 w-11 rounded-full object-cover border border-black/10" />
                 <div>
                   <div className="text-xl font-semibold text-[var(--ink)] font-display">MJ Solution Group</div>
-                  <div className="text-xs uppercase tracking-[0.3em] text-[var(--moss)]">Multi-Disciplinary</div>
+                  <div className="text-xs uppercase tracking-[0.3em] text-[var(--moss)]"></div>
                 </div>
               </Link>
             </div>
@@ -60,6 +78,31 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                   {item.name}
                 </Link>
               ))}
+              <div className="relative" ref={dropdownRef}>
+                <button
+                  onClick={() => setServicesDropdownOpen(!servicesDropdownOpen)}
+                  className="px-3 py-2 rounded-full text-sm font-medium transition-colors text-[var(--ink)] hover:bg-white/70 flex items-center gap-1"
+                >
+                  Services
+                  <ChevronDown className={`h-4 w-4 transition-transform ${servicesDropdownOpen ? 'rotate-180' : ''}`} />
+                </button>
+                {servicesDropdownOpen && (
+                  <div className="absolute top-full mt-2 w-64 bg-white border border-black/10 rounded-2xl shadow-lg py-2 z-50">
+                    {serviceLinks.map((item) => (
+                      <Link
+                        key={item.name}
+                        to={item.href}
+                        onClick={() => setServicesDropdownOpen(false)}
+                        className={`block px-4 py-3 text-sm text-[var(--ink)] hover:bg-[var(--sand)] transition-colors ${
+                          isActive(item.href) ? 'bg-[var(--sand)] font-semibold' : ''
+                        }`}
+                      >
+                        {item.name}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
               <Link
                 to="/contact"
                 className="ml-2 inline-flex items-center rounded-full bg-[var(--clay)] px-5 py-2 text-sm font-semibold text-white shadow-sm hover:bg-[var(--moss)] transition-colors"

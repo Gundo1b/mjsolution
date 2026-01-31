@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Monitor, Construction, GraduationCap, Shield, FileText, ChevronRight, Sparkles, MapPin } from 'lucide-react';
+import { Monitor, Construction, GraduationCap, Shield, FileText, ChevronRight, Sparkles, MapPin, Globe } from 'lucide-react';
 
 export default function Home() {
   useEffect(() => {
@@ -29,12 +29,21 @@ export default function Home() {
   const divisions = [
     {
       title: 'Business Solutions',
-      description: 'ICT services, web development, e-commerce, and compliance support for growing organizations.',
+      description: 'Compliance support for growing organizations.',
       icon: Monitor,
       href: '/business-solutions',
       image:
         'https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1200&q=80',
       tone: 'text-[var(--moss)]',
+    },
+    {
+      title: 'ICT Services',
+      description: 'Web development, e-commerce solutions, and digital systems for business growth.',
+      icon: Globe,
+      href: '/ict-services',
+      image:
+        'https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80',
+      tone: 'text-[var(--clay)]',
     },
     {
       title: 'Engineering & Construction',
@@ -76,7 +85,7 @@ export default function Home() {
 
   const proofPoints = [
     { label: 'Clients served', value: '100+' },
-    { label: 'Specialized divisions', value: '5' },
+    { label: 'Specialized divisions', value: '6' },
     { label: 'Nationwide coverage', value: '9 provinces' },
   ];
 
@@ -179,7 +188,7 @@ export default function Home() {
         <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8 mb-12">
           <div>
             <p className="text-xs uppercase tracking-[0.4em] text-[var(--moss)]">Divisions</p>
-            <h2 className="font-display text-3xl sm:text-4xl mt-3">A full-service partner across five divisions.</h2>
+            <h2 className="font-display text-3xl sm:text-4xl mt-3">A full-service partner across six divisions.</h2>
           </div>
           <p className="text-base text-[var(--ink)]/70 max-w-xl">
             Each division operates with dedicated specialists while sharing one governance model for consistent outcomes.

@@ -3,6 +3,7 @@ import Layout from './components/Layout';
 import Home from './pages/Home';
 import About from './pages/About';
 import BusinessSolutions from './pages/BusinessSolutions';
+import ICTServices from './pages/ICTServices';
 import EngineeringConstruction from './pages/EngineeringConstruction';
 import MJAcademy from './pages/MJAcademy';
 import SecurityCleaning from './pages/SecurityCleaning';
@@ -17,6 +18,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/business-solutions" element={<BusinessSolutions />} />
+          <Route path="/ict-services" element={<ICTServices />} />
           <Route path="/engineering-construction" element={<EngineeringConstruction />} />
           <Route path="/mj-academy" element={<MJAcademy />} />
           <Route path="/security-cleaning" element={<SecurityCleaning />} />
