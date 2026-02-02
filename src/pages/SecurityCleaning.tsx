@@ -73,9 +73,9 @@ export default function SecurityCleaning() {
                 Professional security guarding and commercial cleaning services to keep your spaces safe, secure, and pristine.
               </p>
             </div>
-            <div className="image-frame h-[320px]">
+            <div className="image-frame h-[320px] mt-4">
               <img
-                src="https://images.unsplash.com/photo-1489515217757-5fd1be406fef?auto=format&fit=crop&w=1200&q=80"
+                src="/images/security-cleaning.png"
                 alt="Security services"
               />
             </div>

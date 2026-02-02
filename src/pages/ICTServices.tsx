@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Globe, ShoppingCart, CheckCircle } from 'lucide-react';
+import { AnimatedText } from '../components/ui/animated-underline-text-one';
 
 export default function ICTServices() {
   useEffect(() => {
@@ -44,7 +45,13 @@ export default function ICTServices() {
                 <Globe className="h-5 w-5" />
                 ICT Services
               </div>
-              <h1 className="font-display text-4xl sm:text-5xl mt-4 mb-6">Digital solutions that drive business growth.</h1>
+              <div className="mt-4 mb-6">
+                <AnimatedText
+                  text="Deliver ICT, Engineering, Training, Security, and Tendering Support with Governance at the Core"
+                  textClassName="font-display text-4xl sm:text-5xl text-white"
+                  underlineClassName="text-[var(--sun)]"
+                />
+              </div>
               <p className="text-lg text-white/80 leading-relaxed">
                 We build and support the digital tools your teams rely on, from customer-facing platforms to internal systems that make operations simpler.
               </p>
