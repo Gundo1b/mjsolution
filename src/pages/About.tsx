@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { Award, Eye, Target } from 'lucide-react';
+import { AnimatedText } from '../components/ui/animated-underline-text-one';
 
 export default function About() {
   useEffect(() => {
@@ -67,7 +68,12 @@ export default function About() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <p className="text-xs uppercase tracking-[0.4em] text-white/70">About MJ Solution Group</p>
-              <h1 className="font-display text-4xl sm:text-5xl mt-4 mb-6">Committed to compliant, high-impact delivery.</h1>
+              <div className="mt-4 mb-6">
+                <AnimatedText
+                  text="Committed to compliant, high-impact delivery."
+                  textClassName="font-display text-4xl sm:text-5xl text-white"
+                />
+              </div>
               <p className="text-lg text-white/80 leading-relaxed">
                 We are a Pretoria-based service provider with multi-disciplinary teams, built to deliver reliable outcomes
                 across public and private sector engagements.

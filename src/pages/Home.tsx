@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Monitor, Construction, GraduationCap, Shield, FileText, ChevronRight, Sparkles, Globe } from 'lucide-react';
+import { AnimatedText } from '../components/ui/animated-underline-text-one';
 
 export default function Home() {
   useEffect(() => {
@@ -109,9 +110,12 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <p className="text-xs uppercase tracking-[0.4em] text-white/70">Pretoria-based service group</p>
-              <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl mt-4 mb-6 leading-tight">
-                Bold, compliant solutions for the work that matters.
-              </h1>
+              <div className="mt-4 mb-6">
+                <AnimatedText
+                  text="Bold, compliant solutions for the work that matters."
+                  textClassName="font-display text-4xl sm:text-5xl lg:text-6xl leading-tight text-white"
+                />
+              </div>
               <p className="text-lg text-white/80 leading-relaxed mb-8">
                 MJ Solution Group partners with public and private sector clients to deliver ICT, engineering,
                 training, security, and tendering support with governance at the core.

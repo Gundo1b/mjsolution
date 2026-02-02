@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Construction, Building, Zap, Bug, CheckCircle } from 'lucide-react';
+import { AnimatedText } from '../components/ui/animated-underline-text-one';
 
 export default function EngineeringConstruction() {
   useEffect(() => {
@@ -82,7 +83,12 @@ export default function EngineeringConstruction() {
                 <Construction className="h-5 w-5" />
                 Engineering & Construction
               </div>
-              <h1 className="font-display text-4xl sm:text-5xl mt-4 mb-6">Structured delivery for high-stakes builds.</h1>
+              <div className="mt-4 mb-6">
+                <AnimatedText
+                  text="Structured delivery for high-stakes builds."
+                  textClassName="font-display text-4xl sm:text-5xl text-white"
+                />
+              </div>
               <p className="text-lg text-white/80 leading-relaxed">
                 Professional building services, installations, and pest control aligned with regulatory requirements and
                 industry standards.

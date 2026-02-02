@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Monitor, FileCheck, CheckCircle } from 'lucide-react';
+import { AnimatedText } from '../components/ui/animated-underline-text-one';
 
 export default function BusinessSolutions() {
   useEffect(() => {
@@ -61,7 +62,12 @@ export default function BusinessSolutions() {
                 <Monitor className="h-5 w-5" />
                 Business Solutions
               </div>
-              <h1 className="font-display text-4xl sm:text-5xl mt-4 mb-6">Compliance support for growing organizations.</h1>
+              <div className="mt-4 mb-6">
+                <AnimatedText
+                  text="Compliance support for growing organizations."
+                  textClassName="font-display text-4xl sm:text-5xl text-white"
+                />
+              </div>
               <p className="text-lg text-white/80 leading-relaxed">
                 Full compliance support to keep your business registered, operational, and legally compliant.
               </p>

@@ -47,9 +47,8 @@ export default function ICTServices() {
               </div>
               <div className="mt-4 mb-6">
                 <AnimatedText
-                  text="Deliver ICT, Engineering, Training, Security, and Tendering Support with Governance at the Core"
-                  textClassName="font-display text-4xl sm:text-5xl text-white"
-                  underlineClassName="text-[var(--sun)]"
+                  text="Compliant solutions for the work that matters"
+                  textClassName="font-display text-4xl sm:text-5xl text-white font-bold text-[var(--sun)]"
                 />
               </div>
               <p className="text-lg text-white/80 leading-relaxed">
