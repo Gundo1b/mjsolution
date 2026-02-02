@@ -61,6 +61,9 @@ export default function MJAcademy() {
                 <GraduationCap className="h-5 w-5" />
                 MJ Academy
               </div>
+              <div className="block md:hidden mt-2 text-xs uppercase tracking-[0.2em] text-[var(--sun)] font-semibold">
+                B-BBEE LEVEL 1 COMPLIANCE
+              </div>
               <h1 className="font-display text-4xl sm:text-5xl mt-4 mb-6">Skills development designed for impact.</h1>
               <p className="text-lg text-white/80 leading-relaxed">
                 Training programs that build practical capability, strengthen compliance knowledge, and support career growth.
