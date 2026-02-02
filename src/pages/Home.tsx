@@ -189,17 +189,17 @@ export default function Home() {
               <Link
                 key={division.title}
                 to={division.href}
-                className="group rounded-3xl border border-black/10 bg-white/80 shadow-sm hover:shadow-xl transition-all overflow-hidden"
+                className="group flex flex-col h-full rounded-3xl border border-black/10 bg-white/80 shadow-sm hover:shadow-xl transition-all overflow-hidden"
               >
-                <div className="h-44 overflow-hidden">
-                  <img src={division.image} alt={division.title} className="h-full w-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                <div className="h-72 overflow-hidden shrink-0">
+                  <img src={division.image} alt={division.title} className="h-full w-full object-cover object-top group-hover:scale-105 transition-transform duration-500" />
                 </div>
-                <div className="p-6">
+                <div className="p-6 flex flex-col flex-grow">
                   <div className={`inline-flex items-center gap-2 text-sm font-semibold ${division.tone}`}>
                     <Icon className="h-5 w-5" />
                     {division.title}
                   </div>
-                  <p className="mt-3 text-sm text-[var(--ink)]/70">{division.description}</p>
+                  <p className="mt-3 text-sm text-[var(--ink)]/70 flex-grow">{division.description}</p>
                   <div className="mt-5 inline-flex items-center text-sm font-semibold text-[var(--ink)]">
                     View division
                     <ChevronRight className="ml-2 h-4 w-4" />

@@ -1,7 +1,7 @@
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import { useState, useEffect, useRef } from 'react';
-import logoUrl from '../logo.jpeg';
+import logoUrl from '../logo.png';
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -55,9 +55,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           <div className="flex items-center justify-between py-4">
             <div className="flex items-center">
               <Link to="/" className="flex items-center space-x-3">
-                <img src={logoUrl} alt="MJ Solution Group logo" className="h-11 w-11 rounded-full object-cover border border-black/10" />
+                <img src={logoUrl} alt="MJ Solution Group logo" className="h-24 w-24 object-cover" />
                 <div>
-                  <div className="text-xl font-semibold text-[var(--ink)] font-display">MJ Solution Group</div>
+                  <div className="text-base font-semibold text-[var(--ink)] font-display">MJ Solution Group</div>
                   <div className="text-xs uppercase tracking-[0.3em] text-[var(--moss)]"></div>
                 </div>
               </Link>
@@ -176,9 +176,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           <div className="grid grid-cols-1 lg:grid-cols-4 gap-10">
             <div className="lg:col-span-2">
               <div className="flex items-center space-x-3 mb-4">
-                <img src={logoUrl} alt="MJ Solution Group logo" className="h-10 w-10 rounded-full object-cover border border-white/20" />
+                <img src={logoUrl} alt="MJ Solution Group logo" className="h-28 w-28 object-cover" />
                 <div>
-                  <div className="text-lg font-semibold font-display">MJ Solution Group</div>
+                  <div className="text-sm font-semibold font-display">MJ Solution Group</div>
                   <div className="text-xs uppercase tracking-[0.3em] text-white/70">Pretoria, Gauteng</div>
                 </div>
               </div>
