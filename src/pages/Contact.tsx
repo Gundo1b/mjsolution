@@ -38,7 +38,7 @@ export default function Contact() {
     {
       icon: Mail,
       title: 'Email',
-      details: ['info@mjsolutiongroup.co.za', 'projects@mjsolutiongroup.co.za'],
+      details: ['info@mjsolutiongroup.co.za', 'projects@mjsolutiongroup.co.za', 'matimba.m@mjsolution.co.za'],
     },
     {
       icon: Clock,
